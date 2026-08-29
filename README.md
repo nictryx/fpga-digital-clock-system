@@ -43,6 +43,6 @@ The design consists of a top-level I/O module, a main clock and calendar module,
 * Seven-Segment Display Multiplexing
 * FPGA I/O Control
 
-## Project Purpose
+## Project Goal
 
-The purpose of this project is to demonstrate how counters, registers, timing logic, user inputs, and display interfacing can be combined to implement a complete digital clock and calendar on FPGA hardware.
+The goal of this project is to demonstrate how counters, registers, timing logic, user inputs, and display interfacing can be combined to implement a complete digital clock and calendar on FPGA hardware.
