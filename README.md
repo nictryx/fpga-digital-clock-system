@@ -45,8 +45,19 @@ The system manages:
 
 The time is displayed in the following format:
 
-```text
-Hours : Minutes : Seconds   AM/PM 
+**Hours : Minutes : Seconds   AM/PM**
+
+The date is displayed as:
+
+**Day / Month / Year**
+
+Board inputs are used to select the operating mode, choose which value to modify, set new values, and reset the system.
+
+## Seven-Segment Display
+
+A dedicated Verilog module converts numerical values into the corresponding seven-segment display patterns.
+
+The display is multiplexed across the Nexys 4 DDR digits to show the current time or date depending on the selected operating mode.
 
 ## Project Goal
 
