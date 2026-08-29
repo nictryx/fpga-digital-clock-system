@@ -1,66 +1,69 @@
-# FPGA Digital Clock System
+FPGA Digital Clock System (Nexys 4 DDR)
 
-A Verilog-based digital clock system implemented on the **Nexys 4 DDR Artix-7 FPGA**.
+A Verilog-based digital clock and calendar implemented on the Nexys 4 DDR Artix-7 FPGA board.
 
-The system provides real-time timekeeping, date tracking, configurable time and date settings, AM/PM indication, and seven-segment display output using FPGA-based digital logic.
+The system tracks time and date, supports manual configuration through the board inputs, displays AM/PM, and drives the eight-digit seven-segment display using multiplexing logic.
 
-## Features
+Features
 
-- 12-hour digital clock
-- Hours, minutes, and seconds tracking
-- AM / PM indication
-- Day, month, and year tracking
-- Automatic time and date incrementing
-- Configurable time and date values
-- Time / date display modes
-- Reset functionality
-- Seven-segment display output
-- FPGA-based timing and counter logic
+12-hour digital clock
 
-## Tech Stack
+Hours, minutes, and seconds tracking
 
-- Verilog HDL
-- AMD Xilinx Artix-7 FPGA
-- Nexys 4 DDR
-- Xilinx Vivado
-- Digital Logic Design
-- Clock Counters & Registers
-- Seven-Segment Display Interfacing
-- FPGA I/O Control
+AM/PM indication
 
-## System Overview
+Day, month, and year tracking
 
-The FPGA digital clock system uses the onboard clock signal to maintain and display time and date information on the Nexys 4 DDR seven-segment display.
+Automatic time and date incrementing
 
-The system manages:
+Configurable time and date values
 
-- 12-hour timekeeping with hours, minutes, and seconds
-- AM / PM indication
-- Day, month, and year tracking
-- Automatic time and date incrementing
-- Configurable time and date values
-- Time / date display modes
-- Reset and selection controls
-- Seven-segment display multiplexing
+Time and date display modes
 
-The time is displayed in the following format:
+Reset functionality
 
-**Hours : Minutes : Seconds   AM/PM**
+Multiplexed seven-segment display output
 
-The date is displayed as:
+How It Works
 
-**Day / Month / Year**
+The FPGA clock is divided to generate the required timing intervals.
 
-Board inputs are used to select the operating mode, choose which value to modify, set new values, and reset the system.
+Counters track seconds, minutes, hours, days, months, and years.
 
-## Seven-Segment Display
+The time and date values automatically roll over when their limits are reached.
 
-A dedicated Verilog module converts numerical values into the corresponding seven-segment display patterns.
+Board inputs are used to select the display mode and modify individual values.
 
-The display is multiplexed across the Nexys 4 DDR digits to show the current time or date depending on the selected operating mode.
+The selected time or date values are converted and multiplexed across the eight-digit seven-segment display.
 
-## Project Goal
+Main Components
 
-The goal of this project is to design and implement a digital clock system entirely in FPGA hardware using Verilog HDL.
+Nexys 4 DDR Development Board
 
-The project demonstrates core digital system design concepts including clock division, counters, registers, time and date logic, user-controlled inputs, modular Verilog design, and seven-segment display interfacing.
+AMD Xilinx Artix-7 FPGA
+
+Eight-Digit Seven-Segment Display
+
+Board Switches and Push Buttons
+
+100 MHz Onboard Clock
+
+The design consists of a top-level I/O module, a main clock and calendar module, and a dedicated seven-segment decoder module.
+
+Tech Stack
+
+Verilog HDL
+
+Xilinx Vivado
+
+FPGA Digital Logic Design
+
+Clock Counters and Registers
+
+Seven-Segment Display Multiplexing
+
+FPGA I/O Control
+
+Project Goal
+
+The goal of this project is to demonstrate how counters, registers, timing logic, user inputs, and display interfacing can be combined to implement a complete digital clock and calendar on FPGA hardware.
