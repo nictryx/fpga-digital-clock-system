@@ -36,7 +36,7 @@ The design consists of a top-level I/O module, a main clock and calendar module,
 
 ## Tech Stack
 
-* Verilog HDL
+* Verilog
 * Xilinx Vivado
 * FPGA Digital Logic Design
 * Clock Counters and Registers
